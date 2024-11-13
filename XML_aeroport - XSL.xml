@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE aeroports SYSTEM "DTD_aeroport.dtd">
 <!--<?xml-stylesheet type="text/xsl" href="XPath_aeroport.xsl"?> (PAGE BLANCHE)-->
+<?xml-stylesheet type="text/xsl" href="XSL_Bonus.xsl"?>
 
 <!--Afficher les dates des vols : (XPath)
   //vol/trajet/aeroport[@type='depart']/date
