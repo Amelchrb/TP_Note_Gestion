@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/aeroport"
+           xmlns="http://www.example.com/aeroport"
+           elementFormDefault="qualified">
+    <xs:element name="aeroports">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employes" type="EmployesType"/>
+                <xs:element name="pistes" type="PistesType"/>
+                <xs:element name="compagnies" type="CompagniesType"/>
+                <xs:element name="avions" type="AvionsType"/>
+                <xs:element name="vols" type="VolsType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="EmployesType">
+        <xs:sequence>
+            <xs:element name="employe" type="EmployeType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EmployeType">
+        <xs:sequence>
+            <xs:element name="id_employe" type="xs:string"/>
+            <xs:element name="nom_employe" type="xs:string"/>
+            <xs:element name="prenom_employe" type="xs:string"/>
+            <xs:element name="poste_employe" type="xs:string"/>
+            <xs:element name="anciennete_employe" type="xs:integer"/>
+            <xs:element name="date_naissance_employe" type="xs:date"/>
+            <xs:element name="tel_employe" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PistesType">
+        <xs:sequence>
+            <xs:element name="piste" type="PisteType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PisteType">
+        <xs:sequence>
+            <xs:element name="longueur" type="LongueurType"/>
+            <xs:element name="id_piste" type="xs:string"/>
+            <xs:element name="num_piste" type="xs:string"/>
+            <xs:element name="type_piste" type="xs:string"/>
+            <xs:choice>
+                <xs:element name="dispo" type="xs:string" minOccurs="0"/>
+                <xs:element name="indispo" type="xs:string" minOccurs="0"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LongueurType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="unite" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="CompagniesType">
+        <xs:sequence>
+            <xs:element name="compagnie" type="CompagnieType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CompagnieType">
+        <xs:sequence>
+            <xs:element name="id_compagnie" type="xs:string"/>
+            <xs:element name="nom_compagnie" type="xs:string"/>
+            <xs:element name="pays_compagnie" type="xs:string"/>
+            <xs:element name="avions_compagnie">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id_avion" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AvionsType">
+        <xs:sequence>
+            <xs:element name="avion" type="AvionType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AvionType">
+        <xs:sequence>
+            <xs:element name="id_avion" type="xs:string"/>
+            <xs:element name="modele" type="xs:string"/>
+            <xs:element name="capacite" type="xs:integer"/>
+            <xs:element name="annee" type="xs:integer"/>
+            <xs:element name="id_compagnie" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VolsType">
+        <xs:sequence>
+            <xs:element name="vol" type="VolType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VolType">
+        <xs:sequence>
+            <xs:element name="id_vol" type="xs:string"/>
+            <xs:element name="num_vol" type="xs:string"/>
+            <xs:element name="id_compagnie" type="xs:string"/>
+            <xs:element name="id_avion" type="xs:string"/>
+            <xs:element name="nbr_passager" type="xs:integer"/>
+            <xs:element name="trajet" type="TrajetType"/>
+            <xs:element name="equipage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id_employe" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TrajetType">
+        <xs:sequence>
+            <xs:element name="aeroport" type="AeroportType" maxOccurs="2"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AeroportType">
+        <xs:sequence>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="heure" type="xs:time"/>
+            <xs:element name="ville" type="xs:string"/>
+            <xs:element name="pays" type="xs:string"/>
+            <xs:element name="nom_aeroport" type="xs:string"/>
+            <xs:element name="id_piste" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="AeroportTypeAttr" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="AeroportTypeAttr">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="depart"/>
+            <xs:enumeration value="arrivee"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE aeroports SYSTEM "DTD_aeroport.dtd">
-<aeroports>
+<aeroports xmlns="http://www.example.com/aeroport"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.example.com/aeroport XMLSchema_aeroport.xsd">
     <employes>
         <employe>
             <id_employe>1234</id_employe>
@@ -133,7 +135,7 @@
             <trajet>
                 <aeroport type="depart">
                     <date>2024-05-01</date>
-                    <heure>14:30</heure>
+                    <heure>14:30:00</heure>
                     <ville>Paris</ville>
                     <pays>France</pays>
                     <nom_aeroport>Charles de Gaulle</nom_aeroport>
@@ -141,7 +143,7 @@
                 </aeroport>
                 <aeroport type="arrivee">
                     <date>2024-05-01</date>
-                    <heure>17:00</heure>
+                    <heure>17:00:00</heure>
                     <ville>New York</ville>
                     <pays>USA</pays>
                     <nom_aeroport>John F. Kennedy</nom_aeroport>
@@ -163,7 +165,7 @@
             <trajet>
                 <aeroport type="depart">
                     <date>2024-05-02</date>
-                    <heure>10:00</heure>
+                    <heure>10:00:00</heure>
                     <ville>Berlin</ville>
                     <pays>Allemagne</pays>
                     <nom_aeroport>Berlin Brandenburg</nom_aeroport>
@@ -171,7 +173,7 @@
                 </aeroport>
                 <aeroport type="arrivee">
                     <date>2024-05-02</date>
-                    <heure>14:30</heure>
+                    <heure>14:30:00</heure>
                     <ville>Tokyo</ville>
                     <pays>Japon</pays>
                     <nom_aeroport>Narita</nom_aeroport>
@@ -193,7 +195,7 @@
             <trajet>
                 <aeroport type="depart">
                     <date>2024-05-03</date>
-                    <heure>08:00</heure>
+                    <heure>08:00:00</heure>
                     <ville>Istanbul</ville>
                     <pays>Turquie</pays>
                     <nom_aeroport>Istanbul Airport</nom_aeroport>
@@ -201,7 +203,7 @@
                 </aeroport>
                 <aeroport type="arrivee">
                     <date>2024-05-03</date>
-                    <heure>10:00</heure>
+                    <heure>10:00:00</heure>
                     <ville>Dubai</ville>
                     <pays>Émirats Arabes Unis</pays>
                     <nom_aeroport>Dubai International</nom_aeroport>
