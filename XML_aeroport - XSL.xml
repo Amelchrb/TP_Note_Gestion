@@ -1,16 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE aeroports SYSTEM "DTD_aeroport.dtd">
+<!--<?xml-stylesheet type="text/xsl" href="XPath_aeroport.xsl"?> (PAGE BLANCHE)-->
 
-<aeroports xmlns="http://www.example.com/aeroport"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://www.example.com/aeroport XMLSchema_aeroport.xsd">
+<!--Afficher les dates des vols : (XPath)
+  //vol/trajet/aeroport[@type='depart']/date
+  //vol/trajet/aeroport[@type='arrivee']/date
+  --> 
+  
+  <!--Afficher la piste du 1er vol de la BDD : (XPath)
+  (//vol[1]/trajet/aeroport[@type='depart']/id_piste)[1]
+  --> 
+  
+  <!--Afficher le nom des pilotes des vols : (XPath)
+  //vol[equipage/id_employe = //employes/employe[poste_employe='Pilote']/id_employe]/equipage/id_employe
+  --> 
+    
+<aeroports>
     <employes>
         <employe>
             <id_employe>1234</id_employe>
             <nom_employe>Cherbi</nom_employe>
             <prenom_employe>Amel</prenom_employe>
             <poste_employe>Pilote</poste_employe>
-            <anciennete_employe unite="mois">60</anciennete_employe>
+            <anciennete_employe unite="mois">60</anciennete_employe> 
             <date_naissance_employe>2000-07-19</date_naissance_employe>
             <tel_employe>0123333333</tel_employe>
         </employe>
@@ -19,7 +31,7 @@
             <nom_employe>Dujardin</nom_employe>
             <prenom_employe>Jean</prenom_employe>
             <poste_employe>Pilote</poste_employe>
-            <anciennete_employe unite="mois">72</anciennete_employe>
+            <anciennete_employe unite="mois">72</anciennete_employe> 
             <date_naissance_employe>1985-06-15</date_naissance_employe>
             <tel_employe>0123456789</tel_employe>
         </employe>
