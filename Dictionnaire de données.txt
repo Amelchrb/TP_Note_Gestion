@@ -1,0 +1,62 @@
+aeroport:
+
+(LISTE EMPLOYES:)
+employés:
+employé:
+id_employé
+nom_employé
+prenom_employé
+poste_employé
+ancienneté_employé
+date_naissance_employé
+tel_employé
+
+(LISTE PISTES:)
+pistes:
+ 
+piste:
+id_piste
+num_piste
+long_piste (attribut unité ?)
+type_piste
+statut (balise autofermante dispo/indispo)
+
+(LISTES COMPAGNIES:)
+compagnies:
+
+compagnie:
+id_compagnie
+nom_compagnie
+pays_compagnie
+avions_compagnie
+
+(LISTE AVIONS:)
+avions:
+
+avion:
+id_avion
+modele
+capacité
+année
+id_compagnie
+
+(LISTE VOLS:) 
+vols:
+
+vol:
+id_vol
+num_vol
+id_compagnie
+id_avion
+nbr_passager
+trajet:
+aeroport (attribut pour départ/arrivé):
+date
+heure
+ville
+pays
+nom_aeroport
+piste
+équipage:
+id_employé
+
