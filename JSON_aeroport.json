@@ -1,0 +1,217 @@
+{
+    "aeroport": {
+      "employes": [
+        {
+          "id_employe": "1234",
+          "nom_employe": "Cherbi",
+          "prenom_employe": "Amel",
+          "poste_employe": "Pilote",
+          "anciennete_employe": {
+            "value": 60,
+            "unite": "mois"
+          },
+          "date_naissance_employe": "2000-07-19",
+          "tel_employe": "0123333333"
+        },
+        {
+          "id_employe": "4567",
+          "nom_employe": "Dujardin",
+          "prenom_employe": "Jean",
+          "poste_employe": "Pilote",
+          "anciennete_employe": {
+            "value": 72,
+            "unite": "mois"
+          },
+          "date_naissance_employe": "1985-06-15",
+          "tel_employe": "0123456789"
+        },
+        {
+          "id_employe": "4524",
+          "nom_employe": "Ruyo",
+          "prenom_employe": "Clara",
+          "poste_employe": "Personnel de cabine",
+          "anciennete_employe": {
+            "value": 36,
+            "unite": "mois"
+          },
+          "date_naissance_employe": "2001-11-25",
+          "tel_employe": "0912485623"
+        },
+        {
+          "id_employe": "5628",
+          "nom_employe": "Leclerc",
+          "prenom_employe": "Marie",
+          "poste_employe": "Technicien au sol",
+          "anciennete_employe": {
+            "value": 96,
+            "unite": "mois"
+          },
+          "date_naissance_employe": "1982-04-12",
+          "tel_employe": "0712342589"
+        }
+      ],
+      "pistes": [
+        {
+          "id_piste": "6372",
+          "num_piste": "1",
+          "longueur": {
+            "value": 3500,
+            "unite": "m"
+          },
+          "type_piste": "Décollage",
+          "statut": "dispo"
+        },
+        {
+          "id_piste": "5627",
+          "num_piste": "2",
+          "longueur": {
+            "value": 2800,
+            "unite": "m"
+          },
+          "type_piste": "Atterrissage",
+          "statut": "dispo"
+        },
+        {
+          "id_piste": "4572",
+          "num_piste": "3",
+          "longueur": {
+            "value": 4000,
+            "unite": "m"
+          },
+          "type_piste": "Mixte",
+          "statut": "indispo"
+        }
+      ],
+      "compagnies": [
+        {
+          "id_compagnie": "1111",
+          "nom_compagnie": "Air France",
+          "pays_compagnie": "France",
+          "avions_compagnie": ["A001", "A002"]
+        },
+        {
+          "id_compagnie": "2222",
+          "nom_compagnie": "Lufthansa",
+          "pays_compagnie": "Allemagne",
+          "avions_compagnie": ["B001"]
+        },
+        {
+          "id_compagnie": "3333",
+          "nom_compagnie": "Turkish Airlines",
+          "pays_compagnie": "Turquie",
+          "avions_compagnie": ["C002"]
+        }
+      ],
+      "avions": [
+        {
+          "id_avion": "A001",
+          "modele": "Airbus A320",
+          "capacite": 180,
+          "annee": 2018,
+          "id_compagnie": "1111"
+        },
+        {
+          "id_avion": "A002",
+          "modele": "Boeing 737",
+          "capacite": 200,
+          "annee": 2015,
+          "id_compagnie": "1111"
+        },
+        {
+          "id_avion": "B001",
+          "modele": "Airbus A380",
+          "capacite": 550,
+          "annee": 2020,
+          "id_compagnie": "2222"
+        },
+        {
+          "id_avion": "C002",
+          "modele": "Boeing 777",
+          "capacite": 300,
+          "annee": 2016,
+          "id_compagnie": "3333"
+        }
+      ],
+      "vols": [
+        {
+          "id_vol": "V1234",
+          "num_vol": "AF123",
+          "id_compagnie": "1111",
+          "id_avion": "A001",
+          "nbr_passager": 150,
+          "trajet": {
+            "depart": {
+              "date": "2024-05-01",
+              "heure": "14:30:00",
+              "ville": "Paris",
+              "pays": "France",
+              "nom_aeroport": "Charles de Gaulle",
+              "id_piste": "6372"
+            },
+            "arrivee": {
+              "date": "2024-05-01",
+              "heure": "17:00:00",
+              "ville": "New York",
+              "pays": "USA",
+              "nom_aeroport": "John F. Kennedy",
+              "id_piste": "5627"
+            }
+          },
+          "equipage": ["1234", "4567"]
+        },
+        {
+          "id_vol": "V4567",
+          "num_vol": "LH456",
+          "id_compagnie": "2222",
+          "id_avion": "B001",
+          "nbr_passager": 400,
+          "trajet": {
+            "depart": {
+              "date": "2024-05-02",
+              "heure": "10:00:00",
+              "ville": "Berlin",
+              "pays": "Allemagne",
+              "nom_aeroport": "Berlin Brandenburg",
+              "id_piste": "6372"
+            },
+            "arrivee": {
+              "date": "2024-05-02",
+              "heure": "14:30:00",
+              "ville": "Tokyo",
+              "pays": "Japon",
+              "nom_aeroport": "Narita",
+              "id_piste": "4572"
+            }
+          },
+          "equipage": ["4524", "5628"]
+        },
+        {
+          "id_vol": "V7890",
+          "num_vol": "TK789",
+          "id_compagnie": "3333",
+          "id_avion": "C002",
+          "nbr_passager": 180,
+          "trajet": {
+            "depart": {
+              "date": "2024-05-03",
+              "heure": "08:00:00",
+              "ville": "Istanbul",
+              "pays": "Turquie",
+              "nom_aeroport": "Istanbul Airport",
+              "id_piste": "5627"
+            },
+            "arrivee": {
+              "date": "2024-05-03",
+              "heure": "10:00:00",
+              "ville": "Dubai",
+              "pays": "Émirats Arabes Unis",
+              "nom_aeroport": "Dubai International",
+              "id_piste": "4572"
+            }
+          },
+          "equipage": ["1234", "4567"]
+        }
+      ]
+    }
+  }
+  
