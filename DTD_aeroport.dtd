@@ -1,0 +1,52 @@
+<!ELEMENT aeroports (employes, pistes, compagnies, avions, vols)>
+
+<!ELEMENT employes (employe+)>
+<!ELEMENT employe (id_employe, nom_employe, prenom_employe, poste_employe, anciennete_employe, date_naissance_employe, tel_employe)>
+<!ELEMENT id_employe (#PCDATA)>
+<!ELEMENT nom_employe (#PCDATA)>
+<!ELEMENT prenom_employe (#PCDATA)>
+<!ELEMENT poste_employe (#PCDATA)>
+<!ELEMENT anciennete_employe (#PCDATA)>
+<!ELEMENT date_naissance_employe (#PCDATA)>
+<!ELEMENT tel_employe (#PCDATA)>
+
+<!ELEMENT pistes (piste+)>
+<!ELEMENT piste (longueur, id_piste, num_piste, type_piste, (dispo | indispo)?)>
+<!ELEMENT longueur (#PCDATA)>
+<!ATTLIST longueur unite CDATA #REQUIRED>
+<!ELEMENT id_piste (#PCDATA)>
+<!ELEMENT num_piste (#PCDATA)>
+<!ELEMENT type_piste (#PCDATA)>
+<!ELEMENT dispo EMPTY>
+<!ELEMENT indispo EMPTY>
+
+<!ELEMENT compagnies (compagnie+)>
+<!ELEMENT compagnie (id_compagnie, nom_compagnie, pays_compagnie, avions_compagnie)>
+<!ELEMENT id_compagnie (#PCDATA)>
+<!ELEMENT nom_compagnie (#PCDATA)>
+<!ELEMENT pays_compagnie (#PCDATA)>
+<!ELEMENT avions_compagnie (id_avion+)>
+
+<!ELEMENT avions (avion+)>
+<!ELEMENT avion (id_avion, modele, capacite, annee, id_compagnie)>
+<!ELEMENT id_avion (#PCDATA)>
+<!ELEMENT modele (#PCDATA)>
+<!ELEMENT capacite (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+ 
+<!ELEMENT vols (vol+)>
+<!ELEMENT vol (id_vol, num_vol, id_compagnie, id_avion, nbr_passager, trajet, equipage)>
+<!ELEMENT id_vol (#PCDATA)>
+<!ELEMENT num_vol (#PCDATA)>
+<!ELEMENT nbr_passager (#PCDATA)>
+
+<!ELEMENT trajet (aeroport, aeroport)>
+<!ELEMENT aeroport (date, heure, ville, pays, nom_aeroport, id_piste)>
+<!ATTLIST aeroport type (depart | arrivee) #REQUIRED>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT heure (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+<!ELEMENT nom_aeroport (#PCDATA)>
+
+<!ELEMENT equipage (id_employe+)>

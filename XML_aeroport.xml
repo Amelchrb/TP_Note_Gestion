@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aeroports SYSTEM "DTD_aeroport.dtd">
+<aeroports>
+    <employes>
+        <employe>
+            <id_employe>1234</id_employe>
+            <nom_employe>Cherbi</nom_employe>
+            <prenom_employe>Amel</prenom_employe>
+            <poste_employe>Pilote</poste_employe>
+            <anciennete_employe>5</anciennete_employe> <!-- en années -->
+            <date_naissance_employe>2000-07-19</date_naissance_employe>
+            <tel_employe>0123333333</tel_employe>
+        </employe>
+        <employe>
+            <id_employe>4567</id_employe>
+            <nom_employe>Dujardin</nom_employe>
+            <prenom_employe>Jean</prenom_employe>
+            <poste_employe>Pilote</poste_employe>
+            <anciennete_employe>6</anciennete_employe> <!-- en années -->
+            <date_naissance_employe>1985-06-15</date_naissance_employe>
+            <tel_employe>0123456789</tel_employe>
+        </employe>
+         <employe>
+            <id_employe>4524</id_employe>
+            <nom_employe>Ruyo</nom_employe>
+            <prenom_employe>Clara</prenom_employe>
+            <poste_employe>Personnel de cabine</poste_employe>
+            <anciennete_employe>3</anciennete_employe>
+            <date_naissance_employe>2001-11-25</date_naissance_employe>
+            <tel_employe>0912485623</tel_employe>
+        </employe>
+        <employe>
+            <id_employe>5628</id_employe>
+            <nom_employe>Leclerc</nom_employe>
+            <prenom_employe>Marie</prenom_employe>
+            <poste_employe>Technicien au sol</poste_employe>
+            <anciennete_employe>8</anciennete_employe>
+            <date_naissance_employe>1982-04-12</date_naissance_employe>
+            <tel_employe>0712342589</tel_employe>
+        </employe>
+    </employes>
+    
+    <pistes>
+        <piste>
+            <longueur unite="m">3500</longueur>
+            <id_piste>6372</id_piste>
+            <num_piste>1</num_piste>
+            <type_piste>Décollage</type_piste>
+            <dispo/>
+        </piste>
+        <piste>
+            <longueur unite="m">2800</longueur>
+            <id_piste>5627</id_piste>
+            <num_piste>2</num_piste>
+            <type_piste>Atterrissage</type_piste>
+            <dispo/>
+        </piste>
+        <piste >
+            <longueur unite="m">4000</longueur>
+            <id_piste>4572</id_piste>
+            <num_piste>3</num_piste>
+            <type_piste>Mixte</type_piste>
+            <indispo/>
+        </piste>
+    </pistes>
+
+    <compagnies>
+         <compagnie>
+            <id_compagnie>1111</id_compagnie>
+            <nom_compagnie>Air France</nom_compagnie>
+            <pays_compagnie>France</pays_compagnie>
+            <avions_compagnie>
+                <id_avion>A001</id_avion>
+                <id_avion>A002</id_avion>
+            </avions_compagnie>
+        </compagnie>
+        <compagnie>
+            <id_compagnie>2222</id_compagnie>
+            <nom_compagnie>Lufthansa</nom_compagnie>
+            <pays_compagnie>Allemagne</pays_compagnie>
+            <avions_compagnie>
+                <id_avion>B001</id_avion>
+            </avions_compagnie>
+        </compagnie>
+        <compagnie>
+            <id_compagnie>3333</id_compagnie>
+            <nom_compagnie>Turkish Airlines</nom_compagnie>
+            <pays_compagnie>Turquiie</pays_compagnie>
+            <avions_compagnie>
+                <id_avion>C002</id_avion>
+            </avions_compagnie>
+        </compagnie>
+    </compagnies>
+
+    <avions>
+        <avion>
+            <id_avion>A001</id_avion>
+            <modele>Airbus A320</modele>
+            <capacite>180</capacite>
+            <annee>2018</annee>
+            <id_compagnie>1111</id_compagnie>
+        </avion>
+        <avion>
+            <id_avion>A002</id_avion>
+            <modele>Boeing 737</modele>
+            <capacite>200</capacite>
+            <annee>2015</annee>
+            <id_compagnie>1111</id_compagnie>
+        </avion>
+        <avion>
+            <id_avion>B001</id_avion>
+            <modele>Airbus A380</modele>
+            <capacite>550</capacite>
+            <annee>2020</annee>
+            <id_compagnie>2222</id_compagnie>
+        </avion>
+        <avion>
+            <id_avion>C002</id_avion>
+            <modele>Boeing 777</modele>
+            <capacite>300</capacite>
+            <annee>2016</annee>
+            <id_compagnie>3333</id_compagnie>
+        </avion>
+    </avions>
+
+    <vols>
+        <vol>
+            <id_vol>V1234</id_vol>
+            <num_vol>AF123</num_vol>
+            <id_compagnie>1111</id_compagnie>
+            <id_avion>A001</id_avion>
+            <nbr_passager>150</nbr_passager>
+            <trajet>
+                <aeroport type="depart">
+                    <date>2024-05-01</date>
+                    <heure>14:30</heure>
+                    <ville>Paris</ville>
+                    <pays>France</pays>
+                    <nom_aeroport>Charles de Gaulle</nom_aeroport>
+                    <id_piste>6372</id_piste>
+                </aeroport>
+                <aeroport type="arrivee">
+                    <date>2024-05-01</date>
+                    <heure>17:00</heure>
+                    <ville>New York</ville>
+                    <pays>USA</pays>
+                    <nom_aeroport>John F. Kennedy</nom_aeroport>
+                    <id_piste>5627</id_piste>
+                </aeroport>
+            </trajet>
+            <equipage>
+                <id_employe>1234</id_employe>
+                <id_employe>4567</id_employe>
+            </equipage>
+        </vol>
+        
+        <vol>
+            <id_vol>V4567</id_vol>
+            <num_vol>LH456</num_vol>
+            <id_compagnie>2222</id_compagnie>
+            <id_avion>B001</id_avion>
+            <nbr_passager>400</nbr_passager>
+            <trajet>
+                <aeroport type="depart">
+                    <date>2024-05-02</date>
+                    <heure>10:00</heure>
+                    <ville>Berlin</ville>
+                    <pays>Allemagne</pays>
+                    <nom_aeroport>Berlin Brandenburg</nom_aeroport>
+                    <id_piste>6372</id_piste>
+                </aeroport>
+                <aeroport type="arrivee">
+                    <date>2024-05-02</date>
+                    <heure>14:30</heure>
+                    <ville>Tokyo</ville>
+                    <pays>Japon</pays>
+                    <nom_aeroport>Narita</nom_aeroport>
+                    <id_piste>4572</id_piste>
+                </aeroport>
+            </trajet>
+            <equipage>
+                <id_employe>4524</id_employe>
+                <id_employe>5628</id_employe>
+            </equipage>
+        </vol>
+        
+        <vol>
+            <id_vol>V7890</id_vol>
+            <num_vol>TK789</num_vol>
+            <id_compagnie>3333</id_compagnie>
+            <id_avion>C002</id_avion>
+            <nbr_passager>180</nbr_passager>
+            <trajet>
+                <aeroport type="depart">
+                    <date>2024-05-03</date>
+                    <heure>08:00</heure>
+                    <ville>Istanbul</ville>
+                    <pays>Turquie</pays>
+                    <nom_aeroport>Istanbul Airport</nom_aeroport>
+                    <id_piste>5627</id_piste>
+                </aeroport>
+                <aeroport type="arrivee">
+                    <date>2024-05-03</date>
+                    <heure>10:00</heure>
+                    <ville>Dubai</ville>
+                    <pays>Émirats Arabes Unis</pays>
+                    <nom_aeroport>Dubai International</nom_aeroport>
+                    <id_piste>4572</id_piste>
+                </aeroport>
+            </trajet>
+            <equipage>
+                <id_employe>1234</id_employe>
+                <id_employe>4567</id_employe>
+            </equipage>
+        </vol>
+    </vols>
+</aeroports>
