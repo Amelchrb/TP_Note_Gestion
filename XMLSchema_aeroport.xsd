@@ -27,10 +27,18 @@
             <xs:element name="nom_employe" type="xs:string"/>
             <xs:element name="prenom_employe" type="xs:string"/>
             <xs:element name="poste_employe" type="xs:string"/>
-            <xs:element name="anciennete_employe" type="xs:integer"/>
+            <xs:element name="anciennete_employe" type="AncienneteType"/>
             <xs:element name="date_naissance_employe" type="xs:date"/>
             <xs:element name="tel_employe" type="xs:string"/>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AncienneteType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="unite" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
 
     <xs:complexType name="PistesType">

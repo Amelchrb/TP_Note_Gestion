@@ -7,6 +7,7 @@
 <!ELEMENT prenom_employe (#PCDATA)>
 <!ELEMENT poste_employe (#PCDATA)>
 <!ELEMENT anciennete_employe (#PCDATA)>
+<!ATTLIST anciennete_employe unite CDATA #REQUIRED>
 <!ELEMENT date_naissance_employe (#PCDATA)>
 <!ELEMENT tel_employe (#PCDATA)>
 

@@ -9,7 +9,7 @@
             <nom_employe>Cherbi</nom_employe>
             <prenom_employe>Amel</prenom_employe>
             <poste_employe>Pilote</poste_employe>
-            <anciennete_employe>5</anciennete_employe> <!-- en années -->
+            <anciennete_employe unite="mois">60</anciennete_employe> <!-- en années -->
             <date_naissance_employe>2000-07-19</date_naissance_employe>
             <tel_employe>0123333333</tel_employe>
         </employe>
@@ -18,7 +18,7 @@
             <nom_employe>Dujardin</nom_employe>
             <prenom_employe>Jean</prenom_employe>
             <poste_employe>Pilote</poste_employe>
-            <anciennete_employe>6</anciennete_employe> <!-- en années -->
+            <anciennete_employe unite="mois">72</anciennete_employe> <!-- en années -->
             <date_naissance_employe>1985-06-15</date_naissance_employe>
             <tel_employe>0123456789</tel_employe>
         </employe>
@@ -27,7 +27,7 @@
             <nom_employe>Ruyo</nom_employe>
             <prenom_employe>Clara</prenom_employe>
             <poste_employe>Personnel de cabine</poste_employe>
-            <anciennete_employe>3</anciennete_employe>
+            <anciennete_employe unite="mois">36</anciennete_employe>
             <date_naissance_employe>2001-11-25</date_naissance_employe>
             <tel_employe>0912485623</tel_employe>
         </employe>
@@ -36,7 +36,7 @@
             <nom_employe>Leclerc</nom_employe>
             <prenom_employe>Marie</prenom_employe>
             <poste_employe>Technicien au sol</poste_employe>
-            <anciennete_employe>8</anciennete_employe>
+            <anciennete_employe unite="mois">96</anciennete_employe>
             <date_naissance_employe>1982-04-12</date_naissance_employe>
             <tel_employe>0712342589</tel_employe>
         </employe>
